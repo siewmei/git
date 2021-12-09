@@ -31,7 +31,6 @@ def getsum(data):
     
     
 getsum(d) 
-print(d.info())
     
 
 
