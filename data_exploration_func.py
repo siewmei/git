@@ -28,7 +28,7 @@ def getsum(data):
     # data.select_dtypes(['object']).columns
     print(data.info())
     print('\nData description :- \n', data.describe(include='all'))
-    
+    print('\nCheck how many null values in data:\n', data.isnull().sum())
     
 getsum(d) 
     
