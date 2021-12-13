@@ -10,10 +10,12 @@ import pandas as pd
 
 path = "C:\\Users\\siewm\\OneDrive\\Desktop\\DNN practice\\data\\"
 datafile = 'Video_games_esrb_rating.csv'
+testdata = 'test_esrb.csv'
 
 os.chdir(path)
 
 d = pd.read_csv(path+datafile)
+td = pd.read_csv(path+testdata)
 
 def getsum(data):
     '''compute all the necessary stats'''
@@ -28,12 +30,10 @@ def getsum(data):
     # data.select_dtypes(['object']).columns
     print(data.info())
     print('\nData description :- \n', data.describe(include='all'))
-    
+    print('\nCheck how many null values in data:\n', data.isnull().sum())
     
 getsum(d) 
     
+d.esrb_rating.value_counts()
 
-
-
-    
     
